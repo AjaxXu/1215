@@ -10,7 +10,7 @@ from flask import abort, current_app
 from flask.ext.sqlalchemy import BaseQuery
 from flask.ext.principal import RoleNeed, UserNeed, Permission
 
-from blog import db
+from myBlog import db
 
 class UserQuery(BaseQuery):
 

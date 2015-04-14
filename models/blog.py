@@ -10,8 +10,10 @@ from flask import abort, current_app
 from flask.ext.sqlalchemy import BaseQuery
 
 from user import User
-from blog import db
+from myBlog import db
 from helpers import storage, slugify, markdown
+import signals
+
 
 class PostQuery(BaseQuery):
 
