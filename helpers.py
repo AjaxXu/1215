@@ -17,11 +17,11 @@ from datetime import datetime
 
 from pygments import highlight
 from pygments.lexers import get_lexer_by_name
-from pygments.formatters import HtmlFormatter
+from pygments.formatters.html import HtmlFormatter
 
 from flask import current_app, g
-from flask.ext.babel import gettext, ngettext, format_date, format_datetime
-from flask.ext.themes import render_theme_template
+from flask_babel import gettext, ngettext, format_date, format_datetime
+from flaskext.themes import render_theme_template
 
 from extensions import cache
 

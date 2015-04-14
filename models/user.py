@@ -4,11 +4,9 @@
 import hashlib
 from datetime import datetime
 
-from werkzeug import cached_property
-
 from flask import abort, current_app
-from flask.ext.sqlalchemy import BaseQuery
-from flask.ext.principal import RoleNeed, UserNeed, Permission
+from flask_sqlalchemy import BaseQuery
+from flask_principal import RoleNeed, UserNeed, Permission
 
 from myBlog import db
 

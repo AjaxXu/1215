@@ -1,17 +1,20 @@
 #!/usr/bin/env python
 # encoding: utf-8
 
-import hashlib
+import hashlib, re, random
 from datetime import datetime
 
-from werkzeug import cached_property
+from werkzeug.utils import cached_property
 
-from flask import abort, current_app
-from flask.ext.sqlalchemy import BaseQuery
+from flask import abort, current_app, url_for, Markup
+from flask_babel import gettext as _
+from flask_sqlalchemy import BaseQuery
+from flask_principal import RoleNeed, UserNeed, Permission
 
 from user import User
 from myBlog import db
 from helpers import storage, slugify, markdown
+from permissions import moderator, admin
 import signals
 
 

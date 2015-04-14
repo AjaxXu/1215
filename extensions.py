@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 #coding=utf-8
 
-from flask.ext.mail import Mail
-from flask.ext.cache import Cache
-from flask.ext.uploads import UploadSet, IMAGES
+from flask_mail import Mail
+from flask_cache import Cache
+from flaskext.uploads import UploadSet, IMAGES
 
 __all__ = ['mail', 'cache', 'photos']
 
